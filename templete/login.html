@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login • Chat Bot</title>
+    <link rel="stylesheet" href="./static/style.css" />
+</head>
+
+<body>
+    <div class="page">
+        <div class="app">
+            <header class="topbar">
+                <div class="brand">
+                    <h1>Chat Bot</h1>
+                    <p>Sign in to continue</p>
+                </div>
+
+                <div class="actions">
+                    <a class="btn" href="/">Back</a>
+                </div>
+            </header>
+
+            <main class="panel authCard" aria-label="Login">
+                <div class="authHeader">
+                    <h2>Welcome back</h2>
+                    <p>Use your email and password, or continue with Google.</p>
+                </div>
+
+                <div class="authBody">
+                    <button class="btn googleBtn" id="googleBtn" type="button">
+                        Continue with Google
+                    </button>
+
+                    <div class="divider" role="separator" aria-label="Or"><span>OR</span></div>
+
+                    <form class="authForm" id="loginForm" autocomplete="on" novalidate>
+                        <label class="field">
+                            <span class="label">Email</span>
+                            <input class="textInput" id="email" name="email" type="email" inputmode="email"
+                                autocomplete="email" placeholder="you@example.com" required />
+                        </label>
+
+                        <label class="field">
+                            <span class="label">Password</span>
+                            <input class="textInput" id="password" name="password" type="password"
+                                autocomplete="current-password" placeholder="Your password" required />
+                        </label>
+
+                        <button class="btn primary" id="loginBtn" type="submit">
+                            Sign in
+                        </button>
+
+                        <p class="helper">
+                            Don’t have an account? <a href="/signup">Create one</a>
+                        </p>
+                    </form>
+
+                    <div class="notice" id="notice" role="status" aria-live="polite"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="./static/firebase-config.js"></script>
+    <script type="module" src="./static/login.js"></script>
+</body>
+
+</html>

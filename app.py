@@ -164,6 +164,14 @@ def create_app() -> Flask:
     def index():
         return render_template("index.html")
 
+    @app.get("/login")
+    def login():
+        return render_template("login.html")
+
+    @app.get("/signup")
+    def signup():
+        return render_template("signup.html")
+
     @app.get("/api/health")
     def health():
         return jsonify({"ok": True})
